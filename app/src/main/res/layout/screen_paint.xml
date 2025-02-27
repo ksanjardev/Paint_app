@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.screen.PaintScreen">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose thickness level"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/thickLevel1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:background="@drawable/level_btn_bg"
+        android:text="1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/thickLevel3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thickLevel3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/thickLevel2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/level_btn_bg"
+        android:text="2"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/thickLevel3"
+        app:layout_constraintLeft_toRightOf="@id/thickLevel1"
+        app:layout_constraintRight_toLeftOf="@id/thickLevel3"
+        app:layout_constraintTop_toTopOf="@id/thickLevel3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/thickLevel3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/level_btn_bg"
+        android:text="3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/thickLevel2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <uz.sanjar.androidexam31.ui.screen.view.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/paint_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clearButton"
+        app:layout_constraintVertical_bias="1.0"
+        app:stroke="2" />
+
+    <ImageView
+        android:id="@+id/clearButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:src="@drawable/ic_clear"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thickLevel3" />
+
+    <ImageButton
+        android:id="@+id/eraserButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_eraser"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clearButton" />
+
+    <ImageButton
+        android:id="@+id/prevButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:foreground="@drawable/state_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_prev"
+        app:layout_constraintRight_toLeftOf="@id/nextButton"
+        app:layout_constraintRight_toRightOf="@id/nextButton"
+        app:layout_constraintTop_toTopOf="@id/nextButton" />
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:foreground="@drawable/state_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_next"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/clearButton" />
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:src="@drawable/ic_download"
+        app:layout_constraintBottom_toBottomOf="@id/eraserButton"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/eraserButton" />
+
+    <ImageView
+        android:id="@+id/triangle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_triangle"
+        app:layout_constraintBottom_toBottomOf="@id/thickLevel1"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thickLevel1" />
+
+    <ImageView
+        android:id="@+id/rectangle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_rectangle"
+        app:layout_constraintBottom_toBottomOf="@id/thickLevel1"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thickLevel1" />
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_circle"
+        app:layout_constraintBottom_toBottomOf="@id/thickLevel1"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thickLevel1" />
+
+    <ImageView
+        android:id="@+id/pencil"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_pencil"
+        app:layout_constraintBottom_toBottomOf="@id/thickLevel1"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/thickLevel1" />
+
+    <ImageView
+        android:id="@+id/color_black"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_black"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView" />
+
+    <ImageView
+        android:id="@+id/color_red"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_red"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView"/>
+
+    <ImageView
+        android:id="@+id/color_green"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/eraser_bg"
+        android:padding="10dp"
+        android:src="@drawable/ic_green"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
