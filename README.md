@@ -1,10 +1,10 @@
-<h1 align="center">🎨 Paint App</h1>
-<p align="center">
+<h1 align="start">🎨 Paint App</h1>
+<p align="start">
   <b>Unleash your creativity on Android!</b><br>
   Built with <code>Android Framework</code> + <code>Custom View</code> for smooth, natural drawing.
 </p>
 
-<p align="center">
+<p align="start">
   <img src="https://github.com/ksanjardev/Paint_app/blob/master/paint_app.gif" height="500" alt="Paint App Demo"/>
 </p>
 
